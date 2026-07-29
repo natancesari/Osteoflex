@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Osteoflex - Soulagement Naturel</title>
+    <style>
+        /* CSS Reset et polices */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* En-tête / Header */
+        header {
+            text-align: center;
+            padding: 15px;
+            background: #ffffff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: 900;
+            color: #4b7bff;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        /* Section Héro (Hero Section) - Inspiré des couleurs de l'image */
+        .hero {
+            background: linear-gradient(135deg, #4b7bff 0%, #ff4b8b 100%);
+            color: white;
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .hero-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 40px;
+            border-radius: 15px;
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255,255,255,0.3);
+        }
+
+        .tagline {
+            font-size: 18px;
+            font-weight: 600;
+            color: #ffd700;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        h1 {
+            font-size: 38px;
+            font-weight: 800;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        h1 span {
+            color: #fff;
+            background-color: #ff4b8b;
+            padding: 0 10px;
+            border-radius: 5px;
+        }
+
+        .benefits-list {
+            list-style: none;
+            margin: 20px 0;
+            font-size: 18px;
+            text-align: left;
+            display: inline-block;
+        }
+
+        .benefits-list li {
+            margin-bottom: 10px;
+            position: relative;
+            padding-left: 30px;
+        }
+
+        .benefits-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #ffd700;
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        /* Section Produit & Prix */
+        .product-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 30px;
+        }
+
+        .product-image-container {
+            margin: 20px 0;
+            max-width: 300px;
+        }
+
+        .product-image-container img {
+            width: 100%;
+            height: auto;
+            filter: drop-shadow(0px 10px 15px rgba(0,0,0,0.2));
+        }
+
+        .price-box {
+            background: white;
+            color: #333;
+            padding: 15px 30px;
+            border-radius: 50px;
+            font-size: 24px;
+            font-weight: bold;
+            margin: 20px 0;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .old-price {
+            text-decoration: line-through;
+            color: #999;
+            font-size: 18px;
+            font-weight: normal;
+        }
+
+        .new-price {
+            color: #e6005c;
+            font-size: 28px;
+        }
+
+        .discount-badge {
+            background: #e6005c;
+            color: white;
+            font-size: 14px;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-weight: bold;
+        }
+
+        /* Bouton d'action (CTA) */
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(to bottom, #ffea00, #ffaa00);
+            color: #333;
+            text-decoration: none;
+            font-size: 22px;
+            font-weight: 800;
+            padding: 20px 40px;
+            border-radius: 50px;
+            text-transform: uppercase;
+            box-shadow: 0 8px 20px rgba(255, 170, 0, 0.4);
+            transition: transform 0.2s, box-shadow 0.2s;
+            margin-top: 10px;
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 25px rgba(255, 170, 0, 0.6);
+            background: linear-gradient(to bottom, #ffef33, #ffb300);
+        }
+
+        /* Section Confiance (Trust) */
+        .trust-section {
+            padding: 40px 20px;
+            background: white;
+            text-align: center;
+        }
+
+        .cod-highlight {
+            display: inline-flex;
+            align-items: center;
+            background-color: #f0f7ff;
+            border: 1px solid #cce0ff;
+            padding: 15px 25px;
+            border-radius: 10px;
+            color: #004085;
+            font-weight: bold;
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .cod-highlight span {
+            font-size: 24px;
+            margin-right: 10px;
+        }
+
+        /* Pied de page et Conformité (Footer / Compliance) */
+        footer {
+            background: #222;
+            color: #aaa;
+            text-align: center;
+            padding: 30px 20px;
+            font-size: 12px;
+        }
+
+        footer a {
+            color: #ccc;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        .disclaimer {
+            max-width: 800px;
+            margin: 20px auto 0;
+            font-size: 11px;
+            color: #777;
+            border-top: 1px solid #444;
+            padding-top: 15px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 600px) {
+            h1 { font-size: 28px; }
+            .price-box { flex-direction: column; gap: 5px; text-align: center; border-radius: 20px;}
+            .cta-button { font-size: 18px; padding: 15px 20px; }
+            .hero-container { padding: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">OSTEOFLEX</div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-container">
+            <div class="tagline">Formule Naturelle</div>
+            <h1>Aide à soulager les inconforts <span>Articulaires et Musculaires</span></h1>
+            
+            <p>Découvrez la puissance de la formule <strong>OSTEOFLEX</strong>. Conçu spécifiquement pour le bien-être de votre dos et de vos articulations.</p>
+
+            <div class="product-section">
+                
+                <!-- INSEREZ L'IMAGE DU PRODUIT ICI -->
+                <!-- Remplacez "lien_vers_votre_image.png" par le nom de votre fichier image dans VS Code -->
+                <div class="product-image-container">
+                    <img src="Osteoflex.png" alt="Produit Osteoflex" />
+                </div>
+                <!-- FIN DE L'INSERTION DE L'IMAGE -->
+
+                <div class="price-box">
+                    <span class="discount-badge">-50%</span>
+                    <span class="old-price">49800 XAF</span>
+                    <span class="new-price">24900 XAF</span>
+                </div>
+
+                <a href="https://ewe14.doctorovtech.com/l/?sub1={gclid}" class="cta-button">Commander Maintenant</a>
+                <p style="margin-top: 15px; font-size: 14px; opacity: 0.9;">Offre limitée dans la limite des stocks disponibles.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="trust-section">
+        <div class="cod-highlight">
+            <span>📦</span> 
+            Paiement à la livraison (COD) - Vous ne payez que lorsque vous recevez le produit ! Zéro Risque.
+        </div>
+        
+        <p style="color: #666; max-width: 600px; margin: 0 auto;">
+            Passez votre commande en toute sécurité dès aujourd'hui. Notre équipe vous contactera pour confirmer l'expédition. L'achat est 100% sécurisé puisque vous réglez directement le livreur à la réception de votre colis.
+        </p>
+    </section>
+
+    <footer>
+        <div class="footer-links">
+            <!-- Liens obligatoires pour Google Ads (à relier vers vos vraies pages) -->
+            <a href="#">Politique de Confidentialité</a> | 
+            <a href="#">Conditions Générales de Vente</a> | 
+            <a href="#">Contactez-nous</a>
+        </div>
+        
+        <div class="disclaimer">
+            <strong>Avertissement :</strong> Les informations fournies sur ce site ne remplacent en aucun cas un avis médical professionnel, un diagnostic ou un traitement. Consultez toujours votre médecin ou un autre professionnel de santé qualifié pour toute question concernant une condition médicale. Les résultats peuvent varier d'une personne à l'autre. Ce produit n'est pas destiné à diagnostiquer, traiter, guérir ou prévenir une maladie. <br><br>
+            &copy; 2024 Osteoflex. Tous droits réservés. Ce site n'est pas affilié à Google ou Google Ads.
+        </div>
+    </footer>
+
+</body>
+</html>
